@@ -169,9 +169,40 @@ multiple abstractions in order to document that grouping as a whole.
 ### Import Statements
 
 A source file imports exactly the top-level modules that it needs; nothing more
-and nothing less. If a source file uses definitions from both `UIKit` and
-`Foundation`, it imports both explicitly; it does not rely on the fact that some
-Apple frameworks transitively import others as an implementation detail.
+and nothing less; preferring implicit declarations. For example, don't import
+`UIKit` when importing `Foundation` will suffice. Likewise, don't import
+`Foundation` if you must import `UIKit`.
+
+~~~ swift
+import UIKit
+
+var view: UIView
+var deviceModels: [String]
+~~~
+{:.good}
+
+~~~ swift
+import Foundation
+
+var deviceModels: [String]
+~~~
+{:.good}
+
+~~~ swift
+import Foundation
+import UIKit
+
+var view: UIView
+var deviceModels: [String]
+~~~
+{:.bad}
+
+~~~ swift
+import UIKit
+
+var deviceModels: [String]
+~~~
+{:.bad}
 
 Imports of whole modules are preferred to imports of individual declarations or
 submodules.
