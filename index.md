@@ -1139,6 +1139,7 @@ A single blank line appears in the following locations:
 1. _Optionally_ before the first member or after the last member of a type
    (neither is encouraged nor discouraged).
 1. Anywhere explicitly required by other sections of this document.
+1. At the end of each source file to ensure it terminates with a newline character.
 
 _Multiple_ blank lines are permitted, but never required (nor encouraged). If
 you do use multiple consecutive blank lines, do so consistently throughout your
