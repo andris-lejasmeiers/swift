@@ -12,10 +12,14 @@ article pre {
 }
 </style>
 
-This style guide is based on Apple's excellent Swift standard library style and
-also incorporates feedback from usage across multiple Swift projects within
-Google. It is a living document and the basis upon which the formatter is
-implemented.
+This style guide is derived from [Google's Swift Style Guide](https://google.github.io/swift/) which
+is based on Apple's excellent [Swift standard library style](https://swift.org/documentation/api-design-guidelines/)
+and feedback from usage across multiple Swift projects within Google. Also incorporates
+suggestions and rules from [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
+as well [Airbnb Swift Style Guide](https://github.com/airbnb/swift#file-organization).
+
+This is a living document and the basis upon which we configure our code
+linters and formatters.
 
 ## Table of Contents
 {:.no_toc}
