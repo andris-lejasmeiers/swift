@@ -350,7 +350,7 @@ organizational structure_ that you could explain to a reviewer if asked.
 
 ### Column Limit
 
-Swift code has a column limit of 100 characters. Except as noted below, any line
+Swift code has a column limit of **100** characters. Except as noted below, any line
 that would exceed this limit must be line-wrapped as described in
 [Line-Wrapping](#line-wrapping).
 
