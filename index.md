@@ -1141,9 +1141,9 @@ A single blank line appears in the following locations:
 1. Anywhere explicitly required by other sections of this document.
 1. At the end of each source file to ensure it terminates with a newline character.
 
-_Multiple_ blank lines are permitted, but never required (nor encouraged). If
-you do use multiple consecutive blank lines, do so consistently throughout your
-code base.
+_Multiple_ consecutive blank lines are prohibited except a double blank line.
+A double blank line is never required (nor encouraged), but if you do use it, do
+so consistently throughout your code base.
 
 ### Parentheses
 
