@@ -49,7 +49,7 @@ remain equal or are improved.
   * If a rule changes the format of the code, it needs to be able to be reformatted automatically (either using [SwiftLint](https://github.com/realm/SwiftLint) autocorrect or [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)).
   * For rules that don't directly change the format of the code, we should have a lint rule that throws a warning.
   * Exceptions to these rules should be rare and heavily justified.
-  
+
 ## Source File Basics
 
 ### File Names
@@ -89,7 +89,9 @@ file. The implications are:
 
 * All other whitespace characters in string and character literals are
   represented by their corresponding escape sequence.
-* Tab characters are not used for indentation.
+* Tab characters are not used for [Indentation](#indentation).
+
+Whitespace characters in all lines are trimmed to prevent noise in diffs.
 
 ### Special Escape Sequences
 
@@ -362,12 +364,7 @@ that would exceed this limit must be line-wrapped as described in
 
 ### Indentation
 
-Lines are indented with 2 spaces to conserve space and help reduce line wrapping.
-
-Whitespaces in all lines are trimmed to prevent noise in diffs.
-
-Be sure to set these preferences in Xcode settings. You can also do this with
-[this script](https://github.com/airbnb/swift/blob/master/resources/xcode_settings.bash).
+Lines are indented with **2** [Whitespace Characters](#whitespace-characters) to conserve space and help reduce need for [Line-Wrapping](#line-wrapping).
 
 ### Braces
 
