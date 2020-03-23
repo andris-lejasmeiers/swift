@@ -23,6 +23,20 @@ implemented.
 * TOC
 {:toc}
 
+## Goals
+
+Following this guide should:
+
+* Make it easier to read and begin understanding unfamiliar code.
+* Make code easier to maintain.
+* Reduce simple programmer errors.
+* Reduce cognitive load while coding.
+* Keep discussions on diffs focused on the code's logic rather than its style.
+
+Note that brevity is not a primary goal. Code should be made more concise only
+if other good code qualities (such as readability, clarity, consistency and simplicity, in that order)
+remain equal or are improved.
+
 ## Source File Basics
 
 ### File Names
