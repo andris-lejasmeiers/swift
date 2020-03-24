@@ -1565,6 +1565,20 @@ Apple's
 hosted on swift.org are considered part of this style guide and are followed as
 if they were repeated here in their entirety.
 
+### Language
+
+Use US English spelling to match Apple's API.
+
+~~~ swift
+let color = "red"
+~~~
+{:.good}
+
+~~~ swift
+let colour = "red"
+~~~
+{:.bad}
+
 ### Naming Conventions Are Not Access Control
 
 Restricted access control (`internal`, `fileprivate`, or `private`) is preferred
