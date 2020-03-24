@@ -460,6 +460,7 @@ As an example, consider the following complex function declaration, which needs
 to be line-wrapped:
 
 ~~~ swift
+
 public func index<Elements: Collection, Element>(of element: Element, in collection: Elements) -> Elements.Index? where Elements.Element == Element, Element: Equatable {
   // ...
 }
