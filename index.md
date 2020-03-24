@@ -91,7 +91,7 @@ file. The implications are:
   represented by their corresponding escape sequence.
 * Tab characters are not used for [Indentation](#indentation).
 
-Whitespace characters in all lines are trimmed to prevent noise in diffs.
+Whitespace characters in all lines are trimmed.
 
 ### Special Escape Sequences
 
