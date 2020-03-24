@@ -2231,9 +2231,9 @@ provides visual emphasis that the condition being tested is a special case that
 causes early exit from the enclosing scope.
 
 Furthermore, `guard` statements improve readability by eliminating extra levels
-of nesting (the "pyramid of doom"); failure conditions are closely coupled to
-the conditions that trigger them and the main logic remains flush left within
-its scope.
+of nesting (the [pyramid of doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)));
+failure conditions are closely coupled to the conditions that trigger them and
+the main logic remains flush left within its scope.
 
 This can be seen in the following examples; in the first, there is a clear
 progression that checks for invalid states and exits, then executes the main
