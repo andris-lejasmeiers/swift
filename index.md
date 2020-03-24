@@ -416,7 +416,7 @@ line break, except when the line ends with a block that also contains zero
 or one statements.
 
 ~~~ swift
-guard let value = value else { return 0 }
+guard let value = value else { 0 }
 
 defer { file.close() }
 
@@ -429,11 +429,11 @@ case .third: return 20
 let squares = numbers.map { $0 * $0 }
 
 var someProperty: Int {
-  get { return otherObject.property }
+  get { otherObject.property }
   set { otherObject.property = newValue }
 }
 
-var someProperty: Int { return otherObject.somethingElse() }
+var someProperty: Int { otherObject.somethingElse() }
 
 required init?(coder aDecoder: NSCoder) { fatalError("no coder") }
 ~~~
@@ -1861,7 +1861,7 @@ directly nested inside the property declaration.
 
 ~~~ swift
 var totalCost: Int {
-  return items.sum { $0.cost }
+  items.sum { $0.cost }
 }
 ~~~
 {:.good}
@@ -1869,7 +1869,7 @@ var totalCost: Int {
 ~~~ swift
 var totalCost: Int {
   get {
-    return items.sum { $0.cost }
+    items.sum { $0.cost }
   }
 }
 ~~~
@@ -2598,7 +2598,7 @@ as cryptography, big-integer implementations, hash functions, and so forth.
 var hashValue: Int {
   // GOOD. What matters here is the distribution of the bit pattern rather than
   // the actual numeric value.
-  return foo.hashValue &+ 31 * (bar.hashValue &+ 31 &* baz.hashValue)
+  foo.hashValue &+ 31 * (bar.hashValue &+ 31 &* baz.hashValue)
 }
 ~~~
 {:.good}
@@ -2607,7 +2607,7 @@ var hashValue: Int {
 var hashValue: Int {
   // INCORRECT. This will trap arbitrarily and unpredictably depending on the
   // hash values of the individual terms.
-  return foo.hashValue + 31 * (bar.hashValue + 31 * baz.hashValue)
+  foo.hashValue + 31 * (bar.hashValue + 31 * baz.hashValue)
 }
 ~~~
 {:.bad}
