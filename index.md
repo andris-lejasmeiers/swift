@@ -1673,7 +1673,8 @@ that makes sense for the type.
 
 ### Global Constants
 
-Like other variables, global constants are `lowerCamelCase`. Hungarian notation,
+Like other variables, global constants are `lowerCamelCase`.
+[Hungarian notation](https://en.wikipedia.org/wiki/Hungarian_notation),
 such as a leading `g` or `k`, is not used.
 
 ~~~ swift
