@@ -1799,6 +1799,25 @@ Apple's documentation on
 [delegates and data sources](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaEncyclopedia/DelegatesandDataSources/DelegatesandDataSources.html)
 also contains some good general guidance about such names.
 
+### Generics
+
+When a type name doesn't have a meaningful relationship or role, use a
+traditional single uppercase letter such as `T`, `U`, or `V`.
+
+~~~ swift
+struct Stack<Element> { ... }
+func write<Target: OutputStream>(to target: inout Target)
+func swap<T>(_ a: inout T, _ b: inout T)
+~~~
+{:.good}
+
+~~~ swift
+struct Stack<T> { ... }
+func write<target: OutputStream>(to target: inout target)
+func swap<Thing>(_ a: inout Thing, _ b: inout Thing)
+~~~
+{:.bad}
+
 ## Programming Practices
 
 Common themes among the rules in this section are: avoid redundancy, avoid
