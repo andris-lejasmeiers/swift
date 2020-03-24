@@ -2158,39 +2158,7 @@ of a test so that they can be reset before the execution of each test.
 ### Access Levels
 
 Omitting an explicit access level is permitted on declarations. For top-level
-declarations, the default access level is `internal`. For nested declarations,
-the default access level is the lesser of `internal` and the access level of the
-enclosing declaration.
-
-Specifying an explicit access level at the file level on an extension is
-forbidden. Each member of the extension has its access level specified if it is
-different than the default.
-
-~~~ swift
-extension String {
-  public var isUppercase: Bool {
-    // ...
-  }
-
-  public var isLowercase: Bool {
-    // ...
-  }
-}
-~~~
-{:.good}
-
-~~~ swift
-public extension String {
-  var isUppercase: Bool {
-    // ...
-  }
-
-  var isLowercase: Bool {
-    // ...
-  }
-}
-~~~
-{:.bad}
+declarations, the default access level is `internal`.
 
 ### Nesting and Namespacing
 
