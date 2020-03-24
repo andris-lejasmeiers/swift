@@ -451,10 +451,10 @@ multi-line statement.
 > Terminology note: **Line-wrapping** is the activity of dividing code into
 > multiple lines that might otherwise legally occupy a single line.
 
-For the purposes of Google Swift style, many declarations (such as type
-declarations and function declarations) and other expressions (like function
-calls) can be partitioned into **breakable** units that are separated by
-**unbreakable** delimiting token sequences.
+Many declarations (such as type declarations and function declarations)
+and other expressions (like function calls) can be partitioned into
+**breakable** units that are separated by **unbreakable** delimiting
+token sequences.
 
 As an example, consider the following complex function declaration, which needs
 to be line-wrapped:
