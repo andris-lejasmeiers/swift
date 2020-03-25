@@ -1887,6 +1887,42 @@ let x = MyType.init(arguments)
 ~~~
 {:.bad}
 
+### Returns
+
+The `return` keyword is omitted for single expression functions or getters.
+
+~~~ swift
+["1", "2", "3"].compactMap { Int($0) }
+
+var size: CGSize {
+  CGSize(width: 100.0, height: 100.0)
+}
+
+func makeInfoAlert(message: String) -> UIAlertController {
+  UIAlertController(
+    title: "Info",
+    message: message,
+    preferredStyle: .alert)
+}
+~~~
+{:.good}
+
+~~~ swift
+["1", "2", "3"].compactMap { return Int($0) }
+
+var size: CGSize {
+  return CGSize(width: 100.0, height: 100.0)
+}
+
+func makeInfoAlert(message: String) -> UIAlertController {
+  return UIAlertController(
+    title: "Info",
+    message: message,
+    preferredStyle: .alert)
+}
+~~~
+{:.bad}
+
 ### Properties
 
 The `get` block for a read-only computed property is omitted and its body is
