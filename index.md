@@ -598,17 +598,10 @@ public func index<Elements: Collection, Element>(
 ~~~
 {:.good}
 
-Function declarations in protocols that are terminated with a closing
-parenthesis (`)`) may place the parenthesis on the same line as the final
-argument **or** on its own line.
+Function declarations that have line-wrapped parameters place the first
+parameter and the closing parenthesis (`)`) on each own line.
 
 ~~~ swift
-public protocol ContrivedExampleDelegate {
-  func contrivedExample(
-    _ contrivedExample: ContrivedExample,
-    willDoSomethingTo someValue: SomeValue)
-}
-
 public protocol ContrivedExampleDelegate {
   func contrivedExample(
     _ contrivedExample: ContrivedExample,
@@ -705,16 +698,11 @@ where
 When a function call is line-wrapped, each argument is written on its own line,
 indented +2 from the original line.
 
-As with function declarations, if the function call terminates its enclosing
-statement and ends with a closing parenthesis (`)`) (that is, it has no trailing
-closure), then the parenthesis may be placed **either** on the same line as the
-final argument **or** on its own line.
+As with function declarations, if the function call has line-wrapped arguments,
+the first argument (along with its label) and closing parenthesis (`)`) are
+placed each on its own line.
 
 ~~~ swift
-let index = index(
-  of: veryLongElementVariableName,
-  in: aCollectionOfElementsThatAlsoHappensToHaveALongName)
-
 let index = index(
   of: veryLongElementVariableName,
   in: aCollectionOfElementsThatAlsoHappensToHaveALongName
@@ -723,7 +711,7 @@ let index = index(
 {:.good}
 
 If the function call ends with a trailing closure and the closure's signature
-must be wrapped, then place it on its own line and wrap the argument list in
+must be line-wrapped, then place it on its own line and wrap the argument list in
 parentheses to distinguish it from the body of the closure below it.
 
 ~~~ swift
