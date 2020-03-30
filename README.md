@@ -1,26 +1,20 @@
-# Google Swift Style Guide
+# Swift Style Guide
 
-This is the source for the
-[Google Swift Style Guide](https://google.github.io/swift) website, which is
-based on the [Swift.org](https://swift.org) documentation (found at
-https://github.com/apple/swift-internals).
+This is the source for the [Swift Style Guide](https://andris-lejasmeiers.github.io/swift)
+website, which is based on the [Google Swift Style Guide](https://google.github.io/swift).
 
-## Local Testing and Development
+## Local Deployment
 
-1. Have Ruby >= 2.0.0 installed.
-2. `gem install bundler`—this command must normally be run with
-   sudo/root/admin privileges.
-3. `bundle install`—run this command as a regular, unprivileged user.
-4. `LC_ALL=en_us.UTF-8 bundle exec jekyll serve --baseurl /swift-style`
-5. Visit [http://localhost:4000/swift-style/](http://localhost:4000/swift-style/).
-6. Make edits to the source, refresh your browser, lather, rinse, repeat.
+The website is generated using [Jekyll](https://jekyllrb.com). Follow the procedure below to deploy it locally.
+
+1. Have a Ruby >= 2.4.0 installed. macOS Catalina 10.15 comes with ruby 2.6.3, so you’re fine.
+2. Run the following commands as a regular, unprivileged user:
+   1. `xcode-select --install` to install the command line tools.
+   2. `gem install --user-install bundler jekyll` to install the [Bunder](https://jekyllrb.com/docs/ruby-101/#bundler) and [Jekyll](https://jekyllrb.com).
+   3. `bundle install --path ~/.gem` to install the dependencies specified in `Gemfile`.
+   5. `bundle exec jekyll serve`
+3. Visit [http://localhost:4000/swift/](http://localhost:4000/swift/)
 
 Notes:
-
-* Changes to `_config.yml` require restarting the local server (step 4
-  above).
-* If you make changes to `_config.yml` specifically in order to serve
-  these pages from an address other than
-  http://google.github.io/swift-style, please make sure those
-  changes are not included in any pull requests, so we don't
-  inadvertently break the main site.
+* Changes to `_config.yml` require restarting the local server (step 2.5 above).
+* After you make edits to the source, refresh your browser.
